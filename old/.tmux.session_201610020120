@@ -1,0 +1,13 @@
+#.tmux-session
+#ログ取得
+pipe-pane -o '/bin/sh -c "while read -r LINE; do echo \"[\$(date +\"%%Y_%%m%%d_%%H%%M%%S_%%N\")] \${LINE}\" >> \${HOME}/.tmux/log/\$(date +%Y%m%d-%H%M%S)-#S-#I.#P.log; done "'
+
+# 横分割&右移動
+splitw -h
+#ログ取得
+pipe-pane -o '/bin/sh -c "while read -r LINE; do echo \"[\$(date +\"%%Y_%%m%%d_%%H%%M%%S_%%N\")] \${LINE}\" >> \${HOME}/.tmux/log/\$(date +%Y%m%d-%H%M%S)-#S-#I.#P.log; done "'
+
+#左のペインに戻る
+selectp -L
+
+
