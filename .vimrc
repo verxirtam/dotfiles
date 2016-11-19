@@ -33,6 +33,17 @@ highlight clear CursorLine
 "検索結果をハイライトする
 set hlsearch
 
+" ステータスラインを常に表示
+set laststatus=2
+
+" 挿入モードで日本語入力時にEscapeキーでIMEをOFFにする
+" Mozcのキー設定で、Escapeキー入力でIMEを無効化する
+" Mozcプロパティ-[一般]-[キー設定]-[キー設定の選択]-[編集]
+" [編集]ボタン-[エントリーを追加]で下記を入力
+" ・モード：入力文字なし
+" ・入力キー：Escape
+" ・コマンド：キャンセル後IMEを無効化
+
 "---------------------------------------
 "ファイルタイプ別の設定
 "---------------------------------------
@@ -90,6 +101,9 @@ NeoBundle 'w0ng/vim-hybrid'
 " カラースキーム一覧表示に Unite.vim を使う
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'ujihisa/unite-colorscheme'
+
+" ステータスラインの表示内容強化
+NeoBundle 'itchyny/lightline.vim'
 
 "unite向けのキーマップ
 nnoremap [unite]    <Nop>
