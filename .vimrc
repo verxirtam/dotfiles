@@ -10,6 +10,7 @@ set number
 set background=dark
 "colorscheme desert
 colorscheme molokai
+"colorscheme jellybeans
 
 set list  " 不可視文字を表示する
 set listchars=tab:>\ ,trail:_,eol:< "タブを >--- で表示する
@@ -29,7 +30,7 @@ nnoremap <C-]> g<C-]>
 
 "カレント行にアンダーラインを表示
 set cursorline
-highlight clear CursorLine
+"highlight clear CursorLine
 
 "検索結果をハイライトする
 set hlsearch
@@ -105,6 +106,9 @@ NeoBundle 'ujihisa/unite-colorscheme'
 
 " ステータスラインの表示内容強化
 NeoBundle 'itchyny/lightline.vim'
+
+" インデントの可視化
+NeoBundle 'nathanaelkane/vim-indent-guides'
 
 "unite向けのキーマップ
 nnoremap [unite]    <Nop>
