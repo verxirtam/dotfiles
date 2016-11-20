@@ -8,7 +8,8 @@ set number
 
 "カラースキームの設定
 set background=dark
-colorscheme desert
+"colorscheme desert
+colorscheme molokai
 
 set list  " 不可視文字を表示する
 set listchars=tab:>\ ,trail:_,eol:< "タブを >--- で表示する
