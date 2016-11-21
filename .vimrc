@@ -115,6 +115,7 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=237
 cabbrev uf :Unite file
 cabbrev ub :Unite buffer
 cabbrev ufb :Unite file buffer
+cabbrev uo :Unite outline
 
 "GLSL向けハイライト
 NeoBundle 'tikhomirov/vim-glsl'
