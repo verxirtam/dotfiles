@@ -6,18 +6,8 @@
 "行番号を表示
 set number
 
-"カラースキームの設定
-set background=dark
-"colorscheme desert
-colorscheme molokai
-"colorscheme jellybeans
-
 set list  " 不可視文字を表示する
-set listchars=tab:>\ ,trail:_,eol:< "タブを >--- で表示する
-
-"全角空白の表示
-highlight ZenkakuSpace ctermbg=white
-match ZenkakuSpace /　/
+set listchars=tab:>\ ,trail:_,eol:< "タブを ">   " で表示する
 
 "タブ文字の長さ
 set tabstop=4
@@ -45,6 +35,9 @@ set laststatus=2
 " ・モード：入力文字なし
 " ・入力キー：Escape
 " ・コマンド：キャンセル後IMEを無効化
+
+" make等の実行時にQuickfixを自動で開く
+autocmd QuickfixCmdPost make,grep,grepadd,vimgrep copen
 
 "---------------------------------------
 "ファイルタイプ別の設定
@@ -86,13 +79,13 @@ augroup END
 "---------------------------
 " bundleで管理するディレクトリを指定
 set runtimepath+=~/.vim/bundle/neobundle.vim/
- 
+
 " Required:
 call neobundle#begin(expand('~/.vim/bundle/'))
- 
+
 " neobundle自体をneobundleで管理
 NeoBundleFetch 'Shougo/neobundle.vim'
- 
+
 " 今後このあたりに追加のプラグインをどんどん書いて行きます！！"
 " jellybeans カラースキーム
 NeoBundle 'nanotech/jellybeans.vim'
@@ -109,13 +102,19 @@ NeoBundle 'itchyny/lightline.vim'
 
 " インデントの可視化
 NeoBundle 'nathanaelkane/vim-indent-guides'
+" 起動時にインデント可視化
+let g:indent_guides_enable_on_vim_startup = 1
+" インデントの色を手動で設定
+let g:indent_guides_auto_colors = 0
+" 奇数列目の色の設定
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=235
+" 偶数列目の色の設定
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=237
 
-"unite向けのキーマップ
-nnoremap [unite]    <Nop>
-nmap     <Space>u [unite]
-
-nnoremap <silent> [unite]f   :<C-u>Unite file<CR>
-nnoremap <silent> [unite]b   :<C-u>Unite buffer<CR>
+"unite向けの短縮入力
+cabbrev uf :Unite file
+cabbrev ub :Unite buffer
+cabbrev ufb :Unite file buffer
 
 "GLSL向けハイライト
 NeoBundle 'tikhomirov/vim-glsl'
@@ -245,4 +244,18 @@ NeoBundleCheck
 "-------------------------
 " End Neobundle Settings.
 "-------------------------
+
+"カラースキームの設定
+"Neobundleの設定の後に入力する必要がある
+set background=dark
+"colorscheme desert
+"colorscheme molokai
+colorscheme hybrid
+"colorscheme jellybeans
+
+"全角空白の表示
+highlight ZenkakuSpace ctermbg=white
+match ZenkakuSpace /　/
+
+
 
