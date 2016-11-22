@@ -112,10 +112,10 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=235
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=237
 
 "unite向けの短縮入力
-cabbrev uf :Unite file
-cabbrev ub :Unite buffer
-cabbrev ufb :Unite file buffer
-cabbrev uo :Unite outline
+cabbrev uf Unite file
+cabbrev ub Unite buffer
+cabbrev ufb Unite file buffer
+cabbrev uo Unite outline
 
 "GLSL向けハイライト
 NeoBundle 'tikhomirov/vim-glsl'
