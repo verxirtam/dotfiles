@@ -1,0 +1,3 @@
+--langmap=C++:+.cu+.cuh
+--regex-c++=/using[ \t]+([A-Za-z0-9._]+)[ \t]*=/\1/u,using type alias/
+
