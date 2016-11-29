@@ -196,7 +196,7 @@ NeoBundle "osyo-manga/vim-marching"
 let g:marching_clang_command = "/usr/bin/clang-3.5"
 
 " オプションを追加する場合
-let g:marching_clang_command_option="-std=c++1y"
+let g:marching_clang_command_option="-std=c++11"
 
 " インクルードディレクトリのパスを設定
 let g:marching_include_paths = filter(
