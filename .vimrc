@@ -118,6 +118,7 @@ cabbrev ufb Unite file buffer
 cabbrev uo Unite outline
 
 
+
 "GLSL向けハイライト
 NeoBundle 'tikhomirov/vim-glsl'
 
@@ -176,17 +177,6 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 \ "\<Plug>(neosnippet_expand_or_jump)"
 \: "\<TAB>"
 
-"Pythonの入力補完
-NeoBundle 'davidhalter/jedi-vim'
-"jediを使ってneocompleteで入力補完する
-autocmd FileType python setlocal omnifunc=jedi#completions
-"jedi自体で入力補完しない
-let g:jedi#completions_enabled = 0
-"jedi自体で入力補完しない
-let g:jedi#auto_vim_configuration = 0
-"import行向けの補完の設定
-let g:neocomplete#force_omni_input_patterns.python = '\%([^. \t]\.\|^\s*@\|^\s*from\s.\+import \|^\s*from \|^\s*import \)\w*'
-
 
 " c, c++向けのプラグイン
 NeoBundle 'c.vim'
@@ -230,6 +220,28 @@ endif
 
 let g:neocomplete#force_omni_input_patterns.cpp =
 	\ '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
+
+
+"Pythonの入力補完
+NeoBundle 'davidhalter/jedi-vim'
+"jediを使ってneocompleteで入力補完する
+autocmd FileType python setlocal omnifunc=jedi#completions
+"docstringは表示しない
+autocmd FileType python setlocal completeopt-=preview
+"jedi自体で入力補完しない
+let g:jedi#completions_enabled = 0
+"jedi自体で入力補完しない
+let g:jedi#auto_vim_configuration = 0
+"import行向けの補完の設定
+if !exists('g:neocomplete#force_omni_input_patterns')
+	let g:neocomplete#force_omni_input_patterns = {}
+endif
+let g:neocomplete#force_omni_input_patterns.python = '\h\w*\|[^. \t]\.\w*'
+
+
+
+
+
 
 " 処理のタイミングを制御する
 " 環境に合わせて間隔を短くする
