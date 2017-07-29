@@ -205,7 +205,8 @@ let g:marching_include_paths = filter(
 \	split(glob('/usr/include/*/'), '\n') +
 \	split(glob('/usr/local/include/*/'), '\n') +
 \	split(glob('/usr/local/cuda/include/'), '\n') +
-\	split(glob('/usr/local/cuda/include/*/'), '\n'),
+\	split(glob('/usr/local/cuda/include/*/'), '\n') +
+\	split(glob('~/programs/ATFViewer/include/'), '\n'),
 \	'isdirectory(v:val)')
 
 " neocomplete.vim と併用して使用する場合
