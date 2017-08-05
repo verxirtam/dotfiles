@@ -15,9 +15,9 @@ splitw -d htop
 resize-pane -D 25
 
 #縦分割して下のペインでnvidia-smiを実行
-#splitw -d 'nvidia-smi dmon -o DT -s pucvmet -d 1'
+splitw -d 'nvidia-smi dmon -o DT -s pucvmet -d 1'
 #下のペインに移動
-#selectp -D
+selectp -D
 
 #縦分割して下のペインでdstatを実行
 #splitw -d 'dstat -t --top-io -al'
