@@ -243,19 +243,6 @@ imap <buffer> <C-x><C-x><C-o> <Plug>(marching_force_start_omni_complete)
 """"""""""""""""""""""""""""""""""""""""""""
 "Pythonの入力補完
 NeoBundle 'davidhalter/jedi-vim'
-"jediを使ってneocompleteで入力補完する
-autocmd FileType python setlocal omnifunc=jedi#completions
-"docstringは表示しない
-autocmd FileType python setlocal completeopt-=preview
-"jedi自体で入力補完しない
-let g:jedi#completions_enabled = 0
-"jedi自体で入力補完しない
-let g:jedi#auto_vim_configuration = 0
-"import行向けの補完の設定
-if !exists('g:neocomplete#force_omni_input_patterns')
-	let g:neocomplete#force_omni_input_patterns = {}
-endif
-let g:neocomplete#force_omni_input_patterns.python = '\h\w*\|[^. \t]\.\w*'
 """"""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
@@ -288,5 +275,20 @@ highlight ZenkakuSpace ctermbg=white
 match ZenkakuSpace /　/
 
 
+""""""""""""""""""""""""""""""""""""""""""""
+"jediを使ってneocompleteで入力補完する
+autocmd FileType python setlocal omnifunc=jedi#completions
+"docstringは表示しない
+autocmd FileType python setlocal completeopt-=preview
+"jedi自体で入力補完しない
+let g:jedi#completions_enabled = 0
+"jedi自体で入力補完しない
+let g:jedi#auto_vim_configuration = 0
+"import行向けの補完の設定
+if !exists('g:neocomplete#force_omni_input_patterns')
+	let g:neocomplete#force_omni_input_patterns = {}
+endif
+let g:neocomplete#force_omni_input_patterns.python = '\h\w*\|[^. \t]\.\w*'
+""""""""""""""""""""""""""""""""""""""""""""
 
 
