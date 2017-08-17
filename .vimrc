@@ -3,6 +3,9 @@
 "共通設定
 "---------------------------------------
 
+"ハイライトの設定
+syntax on
+
 "行番号を表示
 set number
 
@@ -282,6 +285,5 @@ colorscheme hybrid
 "全角空白の表示
 highlight ZenkakuSpace ctermbg=white
 match ZenkakuSpace /　/
-
 
 
