@@ -145,3 +145,6 @@ export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 #STS setting 2015/12/27
 export PATH=/usr/local/sts-bundle/sts-3.7.2.RELEASE:$PATH
 
+#vi alias 2017/08/18
+alias vi=vim
+
