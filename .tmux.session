@@ -36,3 +36,14 @@ clock-mode
 # 最初のpainに戻る
 selectp -L
 selectp -L
+###################
+#GUIが止まってしまう件の情報取得
+###################
+#右上のペインに移動
+selectp -R
+#ログファイルのtail実行
+send-keys 'tail -F /var/log/*.log /home/daisuke/.cache/lxsession/Lubuntu/run.log' Enter
+# 最初のpainに戻る
+selectp -L
+
+

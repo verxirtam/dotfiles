@@ -6,6 +6,9 @@
 "ハイライトの設定
 syntax on
 
+"バックスペースキーの設定
+set backspace=indent,eol,start
+
 "行番号を表示
 set number
 
