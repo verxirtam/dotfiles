@@ -42,7 +42,8 @@ selectp -L
 #右上のペインに移動
 selectp -R
 #ログファイルのtail実行
-send-keys 'tail -F /var/log/*.log /home/daisuke/.cache/lxsession/Lubuntu/run.log' Enter
+#send-keys 'tail -F /var/log/*.log /home/daisuke/.cache/lxsession/Lubuntu/run.log' Enter
+send-keys 'tail -F /var/log/kern.log | grep NVRM' Enter
 # 最初のpainに戻る
 selectp -L
 
