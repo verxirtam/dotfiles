@@ -148,3 +148,6 @@ export PATH=/usr/local/sts-bundle/sts-3.7.2.RELEASE:$PATH
 #vi alias 2017/08/18
 alias vi=vim
 
+#add alias 2017/09/02
+alias less='less -qR'
+
