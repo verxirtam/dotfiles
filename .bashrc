@@ -117,9 +117,7 @@ fi
 #my settings
 #
 export JAVA_HOME=/usr/java/jdk1.8.0_20
-export PATH=/usr/java/jdk1.8.0_20/bin:$PATH
 export CLASSPATH=.:/usr/java
-export PATH=/usr/local/eclipse:$PATH
 
 
 #tmuxの起動用
@@ -138,12 +136,21 @@ fi
 #tmux向けにxterm-256colorに設定
 export TERM=xterm-256color
 
-#Installing CUDA 2014/12/14 update 2016/9/25
-export PATH=/usr/local/cuda/bin:$PATH
-export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
-
-#STS setting 2015/12/27
-export PATH=/usr/local/sts-bundle/sts-3.7.2.RELEASE:$PATH
+#PATHの設定
+#$SHLVL = 1 の時のみ実施
+if [ $SHLVL = 1 ]; then
+	#jdk
+	export PATH=/usr/java/jdk1.8.0_20/bin:$PATH
+	#eclipse
+	export PATH=/usr/local/eclipse:$PATH
+	
+	#Installing CUDA 2014/12/14 update 2016/9/25
+	export PATH=/usr/local/cuda/bin:$PATH
+	export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+	
+	#STS setting 2015/12/27
+	export PATH=/usr/local/sts-bundle/sts-3.7.2.RELEASE:$PATH
+fi
 
 #vi alias 2017/08/18
 alias vi=vim
