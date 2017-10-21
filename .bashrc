@@ -158,3 +158,6 @@ alias vi=vim
 #add alias 2017/09/02
 alias less='less -qR'
 
+#add alias 2017/09/02
+alias lt='ls -ltr'
+
