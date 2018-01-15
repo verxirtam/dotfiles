@@ -161,3 +161,5 @@ alias less='less -qR'
 #add alias 2017/09/02
 alias lt='ls -ltr'
 
+
+
