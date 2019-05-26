@@ -11,8 +11,8 @@ pipe-pane -o '/bin/sh -c "while read -r LINE; do echo \"[\$(date +\"%%Y_%%m%%d_%
 # 縦分割して下のペインでhtopを実行
 splitw -d htop
 #現在右の上のペイン
-#上のペインを25下げる(広げる)
-resize-pane -D 25
+#上のペインを24下げる(広げる)
+resize-pane -D 24
 
 #縦分割して下のペインでnvidia-smiを実行
 splitw -d 'nvidia-smi dmon -o DT -s pucvmet -d 1'
@@ -29,6 +29,8 @@ selectp -D
 
 # 横分割
 splitw -h -d
+#上のペインを2上げる(広げる)
+resize-pane -U 2
 #右側のペインに移動
 selectp -R
 #時計表示
