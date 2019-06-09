@@ -119,9 +119,6 @@ fi
 #
 #my settings
 #
-export JAVA_HOME=/usr/java/jdk1.8.0_20
-export CLASSPATH=.:/usr/java
-
 
 #tmuxの起動用
 tmux_session()
