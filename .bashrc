@@ -146,6 +146,7 @@ if [ $SHLVL = 1 ]; then
 	# Installing CUDA 2014/12/14 update 2016/9/25
 	# export PATH=/usr/local/cuda/bin:$PATH
 	# export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+	:
 fi
 
 #vi alias 2017/08/18
