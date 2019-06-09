@@ -37,7 +37,7 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color) color_prompt=yes;;
+    xterm-color|*-256color) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -83,6 +83,9 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
+
+# colored GCC warnings and errors
+#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
 alias ll='ls -alF'
@@ -139,17 +142,10 @@ export TERM=xterm-256color
 #PATHの設定
 #$SHLVL = 1 の時のみ実施
 if [ $SHLVL = 1 ]; then
-	#jdk
-	export PATH=/usr/java/jdk1.8.0_20/bin:$PATH
-	#eclipse
-	export PATH=/usr/local/eclipse:$PATH
-	
-	#Installing CUDA 2014/12/14 update 2016/9/25
-	export PATH=/usr/local/cuda/bin:$PATH
-	export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
-	
-	#STS setting 2015/12/27
-	export PATH=/usr/local/sts-bundle/sts-3.7.2.RELEASE:$PATH
+	# パスの設定を行う
+	# Installing CUDA 2014/12/14 update 2016/9/25
+	# export PATH=/usr/local/cuda/bin:$PATH
+	# export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 fi
 
 #vi alias 2017/08/18
