@@ -2,41 +2,8 @@
 #ログ取得
 pipe-pane -o '/bin/sh -c "while read -r LINE; do echo \"[\$(date +\"%%Y_%%m%%d_%%H%%M%%S_%%N\")] \${LINE}\" >> \${HOME}/.tmux/log/\$(date +%Y%m%d-%H%M%S)-#S-#I.#P.log; done "'
 
-# 横分割&右移動
-splitw -h
-#ログ取得
-pipe-pane -o '/bin/sh -c "while read -r LINE; do echo \"[\$(date +\"%%Y_%%m%%d_%%H%%M%%S_%%N\")] \${LINE}\" >> \${HOME}/.tmux/log/\$(date +%Y%m%d-%H%M%S)-#S-#I.#P.log; done "'
-
-#現在右ペイン
-# 縦分割して下のペインでhtopを実行
-splitw -d htop
-#現在右の上のペイン
-#上のペインを24下げる(広げる)
-resize-pane -D 24
-
-#縦分割して下のペインでnvidia-smiを実行
-splitw -d 'nvidia-smi dmon -o DT -s pucvmet -d 1'
-#下のペインに移動
-selectp -D
-
-#縦分割して下のペインでdstatを実行
-#splitw -d 'dstat -t --top-io -al'
-splitw -d 'dstat -t --top-cpu -cmdngy'
-#下のペインに移動
-selectp -D
-#下のペインに移動
-selectp -D
-
-# 横分割
-splitw -h -d
-#上のペインを2上げる(広げる)
-resize-pane -U 2
-#右側のペインに移動
-selectp -R
-#時計表示
-clock-mode
-# 最初のpainに戻る
-selectp -L
-selectp -L
+if-shell "[ $(uname -n) = 'daisuke-lubuntu' ] || [ $(uname -n) = 'dev' ]" " \
+source-file ~/tools/dotfiles/tmux.session.rich; \
+"
 
 

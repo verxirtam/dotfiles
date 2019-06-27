@@ -60,7 +60,8 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    #PS1='${debian_chroot:+($debian_chroot)}\[\e[01;32m\]\u@\h\[\e[00m\]:\[\e[01;34m\]\w\[\e[00m\]\$ '
+	source ~/tools/dotfiles/bashrc_set_ps1.sh $(uname -n)
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -122,9 +123,6 @@ fi
 #
 #my settings
 #
-export JAVA_HOME=/usr/java/jdk1.8.0_20
-export CLASSPATH=.:/usr/java
-
 
 #tmuxの起動用
 tmux_session()
@@ -140,22 +138,6 @@ if [ $SHLVL = 1 ]; then
 	alias tmux=tmux_session
 fi
 
-#PATHの設定
-#$SHLVL = 1 の時のみ実施
-if [ $SHLVL = 1 ]; then
-	#jdk
-	export PATH=/usr/java/jdk1.8.0_20/bin:$PATH
-	#eclipse
-	export PATH=/usr/local/eclipse:$PATH
-	
-	#Installing CUDA 2014/12/14 update 2016/9/25
-	export PATH=/usr/local/cuda/bin:$PATH
-	export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
-	
-	#STS setting 2015/12/27
-	export PATH=/usr/local/sts-bundle/sts-3.7.2.RELEASE:$PATH
-fi
-
 #vi alias 2017/08/18
 alias vi=vim
 
@@ -165,5 +147,6 @@ alias less='less -qR'
 #add alias 2017/09/02
 alias lt='ls -ltr'
 
-
+# ホスト固有の設定
+source ~/tools/dotfiles/bashrc_specific.sh
 
