@@ -137,18 +137,6 @@ if [ $SHLVL = 1 ]; then
 	#alias tmux="tmux attach || tmux new-session \; source-file ~/.tmux.session"
 	alias tmux=tmux_session
 fi
-#tmux向けにxterm-256colorに設定
-export TERM=xterm-256color
-
-#PATHの設定
-#$SHLVL = 1 の時のみ実施
-if [ $SHLVL = 1 ]; then
-	# パスの設定を行う
-	# Installing CUDA 2014/12/14 update 2016/9/25
-	# export PATH=/usr/local/cuda/bin:$PATH
-	# export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
-	:
-fi
 
 #vi alias 2017/08/18
 alias vi=vim
@@ -159,5 +147,6 @@ alias less='less -qR'
 #add alias 2017/09/02
 alias lt='ls -ltr'
 
-
+# ホスト固有の設定
+source ~/tools/dotfiles/bashrc_specific.sh
 
