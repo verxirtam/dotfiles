@@ -27,7 +27,7 @@ update:
 git:
 	git add --all .
 	git commit -m "update dotfiles."
-	git push -u origin master
+	git push
 
 
 
