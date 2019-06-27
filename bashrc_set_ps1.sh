@@ -38,37 +38,37 @@ fi
 # daisuke-raspi01
 if [ $(uname -n) = "daisuke-raspi01" ]; then
 	# ユーザ名@ホスト名
-	PS1_2_USERHOST='00;32'
+	PS1_2_USERHOST_COLOR='00;32'
 	# 区切り文字(:)
-	PS1_3_SEPARATOR='00;32'
+	PS1_3_SEPARATOR_COLOR='00;32'
 	# カレントディレクトリ$
-	PS1_4_DIR='00;32'
+	PS1_4_DIR_COLOR='00;32'
 	# 半角スペース, $
-	PS1_5_DOLLER='00'
+	PS1_5_DOLLER_COLOR='00'
 fi
 
 # daisuke-raspi02
 if [ $(uname -n) = "daisuke-raspi02" ]; then
 	# ユーザ名@ホスト名
-	PS1_2_USERHOST='00;38;05;87'
+	PS1_2_USERHOST_COLOR='00;38;05;87'
 	# 区切り文字(:)
-	PS1_3_SEPARATOR='00;38;05;87'
+	PS1_3_SEPARATOR_COLOR='00;38;05;87'
 	# カレントディレクトリ$
-	PS1_4_DIR='00;38;05;87'
+	PS1_4_DIR_COLOR='00;38;05;87'
 	# 半角スペース, $
-	PS1_5_DOLLER='00'
+	PS1_5_DOLLER_COLOR='00'
 fi
 
 # daisuke-letsnote
 if [ $(uname -n) = "daisuke-letsnote" ]; then
 	# ユーザ名@ホスト名
-	PS1_2_USERHOST='00;38;05;211'
+	PS1_2_USERHOST_COLOR='00;38;05;211'
 	# 区切り文字(:)
-	PS1_3_SEPARATOR='00;38;05;211'
+	PS1_3_SEPARATOR_COLOR='00;38;05;211'
 	# カレントディレクトリ$
-	PS1_4_DIR='00;38;05;211'
+	PS1_4_DIR_COLOR='00;38;05;211'
 	# 半角スペース, $
-	PS1_5_DOLLER='00'
+	PS1_5_DOLLER_COLOR='00'
 fi
 
 
@@ -98,10 +98,10 @@ PS1=$PS1${PS1_6_SPACE}
 
 # 使用しない環境変数の開放
 
-unset PS1_2_USERHOST_COLOR
-unset PS1_3_SEPARATOR_COLOR
-unset PS1_4_DIR_COLOR
-unset PS1_5_DOLLER_COLOR
+#unset PS1_2_USERHOST_COLOR
+#unset PS1_3_SEPARATOR_COLOR
+#unset PS1_4_DIR_COLOR
+#unset PS1_5_DOLLER_COLOR
 
 unset PS1_1_ROOT
 unset PS1_2_USERHOST

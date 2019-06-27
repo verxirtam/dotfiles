@@ -61,7 +61,7 @@ fi
 
 if [ "$color_prompt" = yes ]; then
     #PS1='${debian_chroot:+($debian_chroot)}\[\e[01;32m\]\u@\h\[\e[00m\]:\[\e[01;34m\]\w\[\e[00m\]\$ '
-	source ~/.dotfiles/bashrc_set_ps1.sh $(uname -n)
+	source ~/tools/dotfiles/bashrc_set_ps1.sh $(uname -n)
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
