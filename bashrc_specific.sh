@@ -3,7 +3,7 @@
 ###################################
 # daisuke-lubuntu
 ###################################
-if [ $(uname -n)="daisuke-lubuntu" ]; then
+if [ $(uname -n) = "daisuke-lubuntu" ]; then
 	# jdk
 	export JAVA_HOME=/usr/java/jdk1.8.0_20
 	export CLASSPATH=.:/usr/java
