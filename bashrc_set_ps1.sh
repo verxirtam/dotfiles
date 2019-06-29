@@ -9,7 +9,7 @@ PS1_3_SEPARATOR_COLOR='00;38;05;204'
 # カレントディレクトリ
 PS1_4_DIR_COLOR='00;38;05;204'
 # gitステータス
-PS1_5_GIT_STATUS_COLOR='00;38;05;123'
+PS1_5_GIT_STATUS_COLOR='00'
 # $
 PS1_6_DOLLER_COLOR='00;38;05;204'
 
@@ -85,7 +85,7 @@ PS1_3_SEPARATOR='\[\e[${PS1_3_SEPARATOR_COLOR}m\]:\[\e[00m\]'
 # カレントディレクトリ
 PS1_4_DIR='\[\e[${PS1_4_DIR_COLOR}m\]\w\[\e[00m\]'
 # gitステータス
-PS1_5_GIT_STATUS='\[\e[${PS1_5_GIT_STATUS_COLOR}m\]$(__git_ps1)\[\e[00m\]'
+PS1_5_GIT_STATUS='\[\e[${PS1_5_GIT_STATUS_COLOR}m\]$(__git_ps1 " [%s]")\[\e[00m\]'
 # $
 PS1_6_DOLLER='\[\e[${PS1_6_DOLLER_COLOR}m\]\$\[\e[00m\]'
 # スペース
