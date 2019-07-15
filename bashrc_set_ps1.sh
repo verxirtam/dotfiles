@@ -40,11 +40,11 @@ fi
 # daisuke-raspi01
 if [ $(uname -n) = "daisuke-raspi01" ]; then
 	# ユーザ名@ホスト名
-	PS1_2_USERHOST_COLOR='00;38;05;92'
+	PS1_2_USERHOST_COLOR='00;38;05;141'
 	# 区切り文字(:)
-	PS1_3_SEPARATOR_COLOR='00;38;05;92'
+	PS1_3_SEPARATOR_COLOR='00;38;05;141'
 	# カレントディレクトリ$
-	PS1_4_DIR_COLOR='00;38;05;92'
+	PS1_4_DIR_COLOR='00;38;05;141'
 	# $
 	PS1_6_DOLLER_COLOR='00'
 fi
