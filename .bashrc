@@ -124,6 +124,9 @@ fi
 #my settings
 #
 
+# for fzf
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
 #tmuxの起動用
 tmux_session()
 {
