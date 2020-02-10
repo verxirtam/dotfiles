@@ -25,8 +25,7 @@ set shiftwidth=4
 nnoremap <C-]> g<C-]>
 
 "カレント行にアンダーラインを表示
-set cursorline
-"highlight clear CursorLine
+"set cursorline
 
 "検索結果をハイライトする
 set hlsearch
