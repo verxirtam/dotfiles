@@ -122,7 +122,10 @@ cabbrev ub Unite buffer
 cabbrev ufb Unite file buffer
 cabbrev uo Unite outline
 
-
+"rust向け設定
+NeoBundle 'rust-lang/rust.vim'
+NeoBundle 'racer-rust/vim-racer'
+let g:rustfmt_autosave = 1
 
 "GLSL向けハイライト
 NeoBundle 'tikhomirov/vim-glsl'

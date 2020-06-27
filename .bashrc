@@ -127,6 +127,9 @@ fi
 # for fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
+# for rust
+[ -f $HOME/.cargo/env ] && source $HOME/.cargo/env
+
 #tmuxの起動用
 tmux_session()
 {
