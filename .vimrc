@@ -67,7 +67,7 @@ Plugin 'tikhomirov/vim-glsl'
 Plugin 'DoxygenToolkit.vim'
 
 " coc.nvim 入力補完
-if system('uname -m') == 'armv6l'
+if system('uname -m | tr -d "\n"') == 'armv6l'
 	echom 'if armv6l'
 	"raspberry pi zero (arm6l)向け：<
 	"pinnedによってgitの更新はされなくなる<
