@@ -13,6 +13,15 @@ PS1_5_GIT_STATUS_COLOR='00'
 # $
 PS1_6_DOLLER_COLOR='00;38;05;204'
 
+
+# git-promptの表示オプション変更
+# 表示設定
+GIT_PS1_SHOWDIRTYSTATE=true
+GIT_PS1_SHOWUNTRACKEDFILES=true
+GIT_PS1_SHOWSTASHSTATE=true
+GIT_PS1_SHOWUPSTREAM=auto
+
+
 # daisuke-lubuntu
 if [ $(uname -n) = "daisuke-lubuntu" ]; then
 	# ユーザ名@ホスト名
@@ -59,6 +68,42 @@ if [ $(uname -n) = "daisuke-raspi02" ]; then
 	PS1_4_DIR_COLOR='00;38;05;87'
 	# $
 	PS1_6_DOLLER_COLOR='00'
+fi
+
+# daisuke-raspi03
+if [ $(uname -n) = "daisuke-raspi03" ]; then
+	# ユーザ名@ホスト名
+	PS1_2_USERHOST_COLOR='00;38;05;82'
+	# 区切り文字(:)
+	PS1_3_SEPARATOR_COLOR='00;38;05;82'
+	# カレントディレクトリ$
+	PS1_4_DIR_COLOR='00;38;05;82'
+	# $
+	PS1_6_DOLLER_COLOR='00'
+	
+	# git-promptの表示オプション
+	# 表示しない設定
+	GIT_PS1_SHOWDIRTYSTATE=
+	GIT_PS1_SHOWUNTRACKEDFILES=
+	GIT_PS1_SHOWSTASHSTATE=
+fi
+
+# daisuke-raspi04
+if [ $(uname -n) = "daisuke-raspi04" ]; then
+	# ユーザ名@ホスト名
+	PS1_2_USERHOST_COLOR='00;38;05;82'
+	# 区切り文字(:)
+	PS1_3_SEPARATOR_COLOR='00;38;05;82'
+	# カレントディレクトリ$
+	PS1_4_DIR_COLOR='00;38;05;82'
+	# $
+	PS1_6_DOLLER_COLOR='00'
+	
+	# git-promptの表示オプション
+	# 表示しない設定
+	GIT_PS1_SHOWDIRTYSTATE=
+	GIT_PS1_SHOWUNTRACKEDFILES=
+	GIT_PS1_SHOWSTASHSTATE=
 fi
 
 # daisuke-letsnote
@@ -147,10 +192,7 @@ fi
 if [ -f ./tools/git/git-prompt.sh ]; then
     source ./tools/git/git-prompt.sh
 fi
-GIT_PS1_SHOWDIRTYSTATE=true
-GIT_PS1_SHOWUNTRACKEDFILES=true
-GIT_PS1_SHOWSTASHSTATE=true
-GIT_PS1_SHOWUPSTREAM=auto
+
 
 
 
