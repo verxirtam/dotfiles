@@ -46,6 +46,9 @@ Plugin 'w0ng/vim-hybrid'
 " ランチャー
 Plugin 'Shougo/unite.vim'
 
+" アウトラインを表示するプラグイン
+Plugin 'Shougo/unite-outline'
+
 " ステータスラインの表示内容強化
 Plugin 'itchyny/lightline.vim'
 
