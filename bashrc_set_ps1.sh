@@ -106,6 +106,30 @@ if [ $(uname -n) = "daisuke-raspi04" ]; then
 	GIT_PS1_SHOWSTASHSTATE=
 fi
 
+# daisuke-raspi05
+if [ $(uname -n) = "daisuke-raspi05" ]; then
+	# ユーザ名@ホスト名
+	PS1_2_USERHOST_COLOR='00;38;05;82'
+	# 区切り文字(:)
+	PS1_3_SEPARATOR_COLOR='00;38;05;82'
+	# カレントディレクトリ$
+	PS1_4_DIR_COLOR='00;38;05;82'
+	# $
+	PS1_6_DOLLER_COLOR='00'
+fi
+
+# daisuke-raspi06
+if [ $(uname -n) = "daisuke-raspi06" ]; then
+	# ユーザ名@ホスト名
+	PS1_2_USERHOST_COLOR='00;38;05;82'
+	# 区切り文字(:)
+	PS1_3_SEPARATOR_COLOR='00;38;05;82'
+	# カレントディレクトリ$
+	PS1_4_DIR_COLOR='00;38;05;82'
+	# $
+	PS1_6_DOLLER_COLOR='00'
+fi
+
 # daisuke-letsnote
 if [ $(uname -n) = "daisuke-letsnote" ]; then
 	# ユーザ名@ホスト名
