@@ -66,11 +66,23 @@ Plugin 'tikhomirov/vim-glsl'
 "doxygenコメントを挿入するプラグイン
 Plugin 'DoxygenToolkit.vim'
 
-"入力補完
-Plugin 'neoclide/coc.nvim'
+" coc.nvim 入力補完
+if system('uname -m') == 'armv6l'
+	echom 'if armv6l'
+	"raspberry pi zero (arm6l)向け：<
+	"pinnedによってgitの更新はされなくなる<
+	"typescript-eslint/eslint-plugin<
+	"がzero(arm6l)向けのnode-jsに対応していないため(v0.0.78)に固定する<
+	Plugin 'neoclide/coc.nvim', {'pinned': 1}
+else
+	echom 'if not armv6l'
+	Plugin 'neoclide/coc.nvim'
+endif
 
-
-
+" vimdoc-jp
+Plugin 'vim-jp/vimdoc-ja'
+" 日本語ヘルプを優先する
+set helplang=ja,en
 
 " =====================================
 " プラグインの追加終了 
