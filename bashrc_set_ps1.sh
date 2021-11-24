@@ -166,6 +166,18 @@ if [ $(uname -n) = "daisuke-msi" ]; then
 	PS1_6_DOLLER_COLOR='00'
 fi
 
+# daisuke-brix(WSL2 ubuntu 20.4)
+if [ $(uname -n) = "daisuke-brix" ]; then
+	# ユーザ名@ホスト名
+	PS1_2_USERHOST_COLOR='00;38;05;211'
+	# 区切り文字(:)
+	PS1_3_SEPARATOR_COLOR='00;38;05;211'
+	# カレントディレクトリ$
+	PS1_4_DIR_COLOR='00;38;05;211'
+	# $
+	PS1_6_DOLLER_COLOR='00'
+fi
+
 # PS1文字列の作成
 
 # ルートディレクトリ
