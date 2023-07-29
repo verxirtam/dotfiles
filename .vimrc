@@ -44,10 +44,10 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'w0ng/vim-hybrid'
 
 " ランチャー
-Plugin 'Shougo/unite.vim'
+"Plugin 'Shougo/unite.vim'
 
 " アウトラインを表示するプラグイン
-Plugin 'Shougo/unite-outline'
+"Plugin 'Shougo/unite-outline'
 
 " ステータスラインの表示内容強化
 Plugin 'itchyny/lightline.vim'
@@ -147,10 +147,10 @@ autocmd QuickfixCmdPost make,grep,grepadd,vimgrep copen
 
 
 "unite向けの短縮入力
-cabbrev uf Unite file
-cabbrev ub Unite buffer
-cabbrev ufb Unite file buffer
-cabbrev uo Unite outline
+"cabbrev uf Unite file
+"cabbrev ub Unite buffer
+"cabbrev ufb Unite file buffer
+"cabbrev uo Unite outline
 
 
 "全角空白の表示

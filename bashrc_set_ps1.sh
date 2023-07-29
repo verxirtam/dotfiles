@@ -22,8 +22,8 @@ GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWUPSTREAM=auto
 
 
-# daisuke-lubuntu
-if [ $(uname -n) = "daisuke-lubuntu" ]; then
+# daisuke-msipc
+if [ $(uname -n) = "daisuke-msipc" ]; then
 	# ユーザ名@ホスト名
 	PS1_2_USERHOST_COLOR='00'
 	# 区切り文字(:)
@@ -34,7 +34,7 @@ if [ $(uname -n) = "daisuke-lubuntu" ]; then
 	PS1_6_DOLLER_COLOR='00'
 fi
 
-# dev (docker in daisuke-lubuntu)
+# dev (docker in daisuke-msipc)
 if [ $(uname -n) = "dev" ]; then
 	# ユーザ名@ホスト名
 	PS1_2_USERHOST_COLOR='00;38;05;227'
