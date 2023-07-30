@@ -2,8 +2,8 @@
 #ログ取得
 pipe-pane -o '/bin/sh -c "while read -r LINE; do echo \"[\$(date +\"%%Y_%%m%%d_%%H%%M%%S_%%N\")] \${LINE}\" >> \${HOME}/.tmux/log/\$(date +%Y%m%d-%H%M%S)-#S-#I.#P.log; done "'
 
-if-shell "[ $(uname -n) = 'daisuke-msipc' ] || [ $(uname -n) = 'dev' ]" " \
-source-file ~/tools/dotfiles/tmux.session.rich; \
-"
+#if-shell "[ $(uname -n) = 'daisuke-msipc' ] || [ $(uname -n) = 'dev' ]" " \
+#source-file ~/tools/dotfiles/tmux.session.rich; \
+#"
 
 
