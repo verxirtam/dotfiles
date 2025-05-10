@@ -6,20 +6,23 @@
 if [ $(uname -n) = "daisuke-msipc" ]; then
 	: "setting for daisuke-msipc"
 	# jdk
-	# export JAVA_HOME=/usr/java/jdk1.8.0_20
-	# export CLASSPATH=.:/usr/java
+	export JAVA_HOME=/usr/lib/jvm/java-19-openjdk-amd64
+	export CLASSPATH=.:/usr/lib/jvm/java-19-openjdk-amd64/lib
 	
 	#PATHの設定
 	#$SHLVL = 1 の時のみ実施
-	# if [ $SHLVL = 1 ]; then
+	 if [ $SHLVL = 1 ]; then
+		# CUDA
+		export PATH=/usr/local/cuda/bin:${PATH}
+		export LD_LIBRARY_PATH=/usr/local/cuda/lib64:${LD_LIBRARY_PATH}
 	#	#jdk
 	#	export PATH=/usr/java/jdk1.8.0_20/bin:$PATH
 	#	#eclipse
 	#	export PATH=/usr/local/eclipse:$PATH
 	#	#STS setting 2015/12/27
 	#	export PATH=/usr/local/sts-bundle/sts-3.7.2.RELEASE:$PATH
-	#	:
-	#fi
+		:
+	fi
 fi
 
 
