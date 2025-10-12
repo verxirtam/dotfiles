@@ -47,7 +47,7 @@ if [ $(uname -n) = "dev" ]; then
 fi
 
 # daisuke-raspi01
-if [ $(uname -n) = "daisuke-raspi01" ]; then
+if [ $(uname -n) = "daisuke-raspi01" ] || [ $(uname -n) = "daisuke-raspi01-new" ]; then
 	# ユーザ名@ホスト名
 	PS1_2_USERHOST_COLOR='00;38;05;141'
 	# 区切り文字(:)
