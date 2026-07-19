@@ -77,7 +77,7 @@ if system('uname -m | tr -d "\n"') == 'armv6l'
 	"がzero(arm6l)向けのnode-jsに対応していないため(v0.0.78)に固定する<
 	Plugin 'neoclide/coc.nvim', {'pinned': 1}
 else
-	Plugin 'neoclide/coc.nvim'
+	Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 endif
 
 " vimdoc-jp

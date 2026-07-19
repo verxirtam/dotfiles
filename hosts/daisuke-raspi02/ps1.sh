@@ -1,0 +1,8 @@
+# ユーザ名@ホスト名
+PS1_2_USERHOST_COLOR='00;38;05;87'
+# 区切り文字(:)
+PS1_3_SEPARATOR_COLOR='00;38;05;87'
+# カレントディレクトリ$
+PS1_4_DIR_COLOR='00;38;05;87'
+# $
+PS1_6_DOLLER_COLOR='00'
