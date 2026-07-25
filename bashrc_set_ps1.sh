@@ -74,11 +74,11 @@ unset PS1_7_SPACE
 #
 # git-completion.bash / git-prompt.sh
 #
-if [ -f ./tools/git/git-completion.bash ]; then
-    source ./tools/git/git-completion.bash
+if [ -f ~/tools/dotfiles/tools/git/git-completion.bash ]; then
+    source ~/tools/dotfiles/tools/git/git-completion.bash
 fi
-if [ -f ./tools/git/git-prompt.sh ]; then
-    source ./tools/git/git-prompt.sh
+if [ -f ~/tools/dotfiles/tools/git/git-prompt.sh ]; then
+    source ~/tools/dotfiles/tools/git/git-prompt.sh
 fi
 
 

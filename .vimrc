@@ -176,5 +176,5 @@ highlight ZenkakuSpace ctermbg=white
 match ZenkakuSpace /　/
 
 "対応する括弧の表示の制御
-highlight MatchParen ctermfg=60 ctermbg=234<
+highlight MatchParen ctermfg=60 ctermbg=234
 
