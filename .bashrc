@@ -35,6 +35,9 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
+#dotfilesリポジトリの配置先(環境変数で上書き可能)
+export DOTFILES_DIR="${DOTFILES_DIR:-$HOME/tools/dotfiles}"
+
 #tmux向けにxterm-256colorに設定
 export TERM=xterm-256color
 
@@ -61,7 +64,7 @@ fi
 
 if [ "$color_prompt" = yes ]; then
     #PS1='${debian_chroot:+($debian_chroot)}\[\e[01;32m\]\u@\h\[\e[00m\]:\[\e[01;34m\]\w\[\e[00m\]\$ '
-	source ~/tools/dotfiles/bashrc_set_ps1.sh $(uname -n)
+	source "$DOTFILES_DIR/bashrc_set_ps1.sh" $(uname -n)
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -154,7 +157,7 @@ alias less='less -qR'
 alias lt='ls -ltr'
 
 # ホスト固有の設定
-source ~/tools/dotfiles/bashrc_specific.sh
+source "$DOTFILES_DIR/bashrc_specific.sh"
 
 
 

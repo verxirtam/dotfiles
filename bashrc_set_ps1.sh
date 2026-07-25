@@ -24,7 +24,7 @@ GIT_PS1_SHOWUPSTREAM=auto
 
 # ホスト固有の設定
 # hosts/<hostname>/ps1.sh が存在すればそれを読み込む
-HOST_PS1_CONFIG=~/tools/dotfiles/hosts/$(uname -n)/ps1.sh
+HOST_PS1_CONFIG="$DOTFILES_DIR/hosts/$(uname -n)/ps1.sh"
 if [ -f "$HOST_PS1_CONFIG" ]; then
 	source "$HOST_PS1_CONFIG"
 fi
@@ -74,11 +74,11 @@ unset PS1_7_SPACE
 #
 # git-completion.bash / git-prompt.sh
 #
-if [ -f ~/tools/dotfiles/tools/git/git-completion.bash ]; then
-    source ~/tools/dotfiles/tools/git/git-completion.bash
+if [ -f "$DOTFILES_DIR/tools/git/git-completion.bash" ]; then
+    source "$DOTFILES_DIR/tools/git/git-completion.bash"
 fi
-if [ -f ~/tools/dotfiles/tools/git/git-prompt.sh ]; then
-    source ~/tools/dotfiles/tools/git/git-prompt.sh
+if [ -f "$DOTFILES_DIR/tools/git/git-prompt.sh" ]; then
+    source "$DOTFILES_DIR/tools/git/git-prompt.sh"
 fi
 
 
