@@ -4,6 +4,8 @@ pipe-pane -o '/bin/sh -c "while read -r LINE; do echo \"[\$(date +\"%%Y_%%m%%d_%
 
 # ホスト固有の設定
 # hosts/<hostname>/tmux.session が存在すればそれを読み込む(-q: 無ければ無視)
-source-file -Fq "$DOTFILES_DIR/hosts/#{host}/tmux.session"
+# 古い tmux は source-file の -F (フォーマット展開) 未対応のため、
+# シェル側でホスト名を展開してから source-file を呼び出す
+run-shell 'tmux source-file -q "$DOTFILES_DIR/hosts/$(uname -n)/tmux.session"'
 
 
