@@ -76,6 +76,8 @@ if system('uname -m | tr -d "\n"') == 'armv6l'
 	"typescript-eslint/eslint-plugin<
 	"がzero(arm6l)向けのnode-jsに対応していないため(v0.0.78)に固定する<
 	Plugin 'neoclide/coc.nvim', {'pinned': 1}
+elseif system('hostname | tr -d "\n"') == 'daisuke-raspi05'
+    "raspi05: armhf環境のためNode.js v20が使えず、coc.nvimを導入しない
 else
 	Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 endif
