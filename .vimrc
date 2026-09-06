@@ -76,8 +76,11 @@ if system('uname -m | tr -d "\n"') == 'armv6l'
 	"typescript-eslint/eslint-plugin<
 	"がzero(arm6l)向けのnode-jsに対応していないため(v0.0.78)に固定する<
 	Plugin 'neoclide/coc.nvim', {'pinned': 1}
-elseif system('hostname | tr -d "\n"') == 'daisuke-raspi05'
-    "raspi05: armhf環境のためNode.js v20が使えず、coc.nvimを導入しない
+elseif index(['daisuke-raspi05', 'daisuke-jetson', 'daisuke-msipc'], system('hostname | tr -d "\n"')) >= 0
+    "coc.nvimを導入しないホスト（要件を満たさないため）
+    "raspi05: armhf環境のためNode.js v20が使えない
+    "jetson : vim 8.1.1694 が coc.nvim の要求(vim 8.1.1719以上)を満たさない
+    "msipc  : aptのNode.jsが12系で coc.nvim v0.0.82 の要求(node 16.18以上)を満たさない
 else
 	Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 endif
