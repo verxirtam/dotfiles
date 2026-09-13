@@ -17,3 +17,6 @@ if [ $SHLVL = 1 ]; then
 #	export PATH=/usr/local/sts-bundle/sts-3.7.2.RELEASE:$PATH
 	:
 fi
+
+# Lean / elan
+export PATH="$HOME/.elan/bin:$PATH"
