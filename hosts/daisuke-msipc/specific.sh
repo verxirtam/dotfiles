@@ -20,3 +20,6 @@ fi
 
 # Lean / elan
 export PATH="$HOME/.elan/bin:$PATH"
+
+# Claude Code native CLI (2026-09-14)
+export PATH="$HOME/.local/bin:$PATH"
